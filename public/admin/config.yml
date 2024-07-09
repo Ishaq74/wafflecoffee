@@ -11,6 +11,119 @@ public_folder: /images
 site_url: "https://wafflecoffeeannecy.netlify.app/" # your site name
 
 collections:
+  - name: siteIdentity
+    label: "🏢 Identité du site"
+    folder: src/content/site-identity
+    create: true
+    format: frontmatter
+    fields:
+      - { name: site_author, label: "Auteur du site", widget: string }
+      - { name: site_dev, label: "Développeur du site", widget: string }
+      - { name: site_dev_url, label: "URL du développeur", widget: string }
+      - { name: site_title, label: "Titre du site", widget: string }
+      - { name: site_logo, label: "Logo du site", widget: image }
+      - { name: site_logo_alt, label: "Texte alternatif du logo", widget: string }
+      - { name: site_address, label: "Adresse du site", widget: string }
+      - { name: site_email, label: "Email du site", widget: string }
+      - { name: site_phone, label: "Téléphone du site", widget: string }
+      - { name: google_maps, label: "URL Google Maps", widget: string }
+      - { name: image_maps, label: "Image de la carte", widget: image }
+      - { name: site_description, label: "Description du site", widget: text }
+      - { name: site_keywords, label: "Mots-clés du site", widget: text }
+      - { name: calendly_link, label: "Lien Calendly", widget: string }
+
+  - name: openingHours
+    label: "⏰ Horaires d'ouverture"
+    folder: src/content/opening-hours
+    create: true
+    format: frontmatter
+    fields:
+      - { name: day, label: "Jour", widget: string }
+      - { name: opens, label: "Heure d'ouverture", widget: string }
+      - { name: closes, label: "Heure de fermeture", widget: string }
+
+  - name: socialMedia
+    label: "📱 Réseaux Sociaux"
+    folder: src/content/social-media
+    create: true
+    format: frontmatter
+    fields:
+      - { name: platform, label: "Plateforme", widget: string }
+      - { name: icon, label: "Icône", widget: image }
+      - { name: url, label: "URL", widget: string }
+
+  - name: whyChooseUs
+    label: "🌟 Pourquoi nous choisir"
+    folder: src/content/why-choose-us
+    create: true
+    format: frontmatter
+    fields:
+      - { name: subtitle, label: "Sous-titre", widget: string }
+      - { name: title, label: "Titre", widget: string }
+      - { name: description, label: "Description", widget: text }
+      - { name: button_link, label: "Lien du bouton", widget: string }
+      - { name: button_text, label: "Texte du bouton", widget: string }
+      - { name: button_aria_label, label: "Aria label du bouton", widget: string }
+      - { name: images, label: "Images", widget: list, fields: [
+          { name: src, label: "Source de l'image", widget: image },
+          { name: alt, label: "Texte alternatif de l'image", widget: string }
+        ]
+      }
+      - { name: reasons, label: "Raisons", widget: list, fields: [
+          { name: icon, label: "Icône", widget: image },
+          { name: title, label: "Titre", widget: string },
+          { name: text, label: "Texte", widget: text }
+        ]
+      }
+      - { name: stats, label: "Statistiques", widget: list, fields: [
+          { name: icon, label: "Icône", widget: image },
+          { name: number, label: "Nombre", widget: string },
+          { name: desc, label: "Description", widget: string }
+        ]
+      }
+
+  - name: mainMenu
+    label: "📋 Menu Principal"
+    folder: src/content/main-menu
+    create: true
+    format: frontmatter
+    fields:
+      - { name: name, label: "Nom", widget: string }
+      - { name: url, label: "URL", widget: string }
+      - { name: subitems, label: "Sous-éléments", widget: list, fields: [
+          { name: name, label: "Nom", widget: string },
+          { name: url, label: "URL", widget: string }
+        ]
+      }
+
+  - name: secondaryMenu
+    label: "📋 Menu Secondaire"
+    folder: src/content/secondary-menu
+    create: true
+    format: frontmatter
+    fields:
+      - { name: name, label: "Nom", widget: string }
+      - { name: url, label: "URL", widget: string }
+      - { name: subitems, label: "Sous-éléments", widget: list, fields: [
+          { name: name, label: "Nom", widget: string },
+          { name: url, label: "URL", widget: string }
+        ]
+      }
+
+  - name: footerMenu
+    label: "📋 Menu de Pied de Page"
+    folder: src/content/footer-menu
+    create: true
+    format: frontmatter
+    fields:
+      - { name: name, label: "Nom", widget: string }
+      - { name: url, label: "URL", widget: string }
+      - { name: subitems, label: "Sous-éléments", widget: list, fields: [
+          { name: name, label: "Nom", widget: string },
+          { name: url, label: "URL", widget: string }
+        ]
+      }
+
   - name: post
     label: "📰 Articles"
     folder: src/content/posts
@@ -18,13 +131,13 @@ collections:
     format: frontmatter
     preview_path: post/{{slug}}
     fields:
-      - { name: title, label: Title }
-      - { name: description, label: Description }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
       - { name: publishedAt, label: Date, widget: date }
-      - {label: "Publish", name: "isPublish", widget: "boolean", default: true}
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Publish", name: "isPublish", widget: "boolean", default: true }
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: body, label: Body, widget: markdown }
-  
+
   - name: big-bubble
     label: "🍰 Big Bubble"
     folder: src/content/big-bubble
@@ -34,7 +147,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
@@ -47,7 +160,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
@@ -60,7 +173,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
@@ -73,7 +186,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
@@ -86,7 +199,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
@@ -99,7 +212,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
@@ -112,7 +225,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
@@ -125,7 +238,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
@@ -138,6 +251,6 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }

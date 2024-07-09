@@ -1,0 +1,38 @@
+---
+subtitle: "Nos Avantages"
+title: "Pourquoi nous choisir pour votre pause gourmande"
+description: "Chez Waffle Coffee Annecy, nous nous engageons à offrir des produits frais et délicieux, préparés avec soin. Notre équipe accueillante et notre ambiance chaleureuse vous garantissent une expérience inoubliable."
+button_link: "/apropos"
+button_text: "En savoir plus"
+button_aria_label: "En savoir plus sur nous"
+images:
+  - src: "../src/assets/waffle1.webp"
+    alt: "Gaufre avec des fruits"
+  - src: "../src/assets/waffle2.webp"
+    alt: "Café et pâtisserie"
+  - src: "../src/assets/waffle3.webp"
+    alt: "Intérieur du café"
+  - src: "../src/assets/waffle4.webp"
+    alt: "Équipe du café"
+reasons:
+  - icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fresh.svg"
+    title: "Produits frais"
+    text: "Nos gaufres et cafés sont préparés avec des ingrédients frais et de qualité."
+  - icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/welcoming.svg"
+    title: "Accueil chaleureux"
+    text: "Notre équipe vous accueille toujours avec le sourire et bonne humeur."
+  - icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/cozy.svg"
+    title: "Ambiance conviviale"
+    text: "Profitez d'un moment de détente dans un cadre agréable et chaleureux."
+stats:
+  - icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/group-gold.svg"
+    number: "+64"
+    desc: "Avis 5 étoiles sur Google"
+  - icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/group-gold.svg"
+    number: "+300"
+    desc: "Gaufres servies chaque semaine"
+  - icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/group-gold.svg"
+    number: "100%"
+    desc: "Clients satisfaits"
+---
+
