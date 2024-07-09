@@ -8,7 +8,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: public/images
 public_folder: /images
-site_url: "https://astro-decapcms-starter.netlify.app/" # your site name
+site_url: "https://wafflecoffeeannecy.netlify.app/" # your site name
 
 collections:
   - name: post
@@ -24,3 +24,16 @@ collections:
       - {label: "Publish", name: "isPublish", widget: "boolean", default: true}
       - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: body, label: Body, widget: markdown }
+  
+  - name: menu
+    label: Menu
+    folder: src/content/menu
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: category, label: Category, widget: select, options: ["Gaufres et Crêpes", "Yaourts Glacés", "Cafés et Thés", "Boissons", "Smoothies et Milkshakes"] }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: Image Alt, widget: string }
