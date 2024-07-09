@@ -12,7 +12,7 @@ site_url: "https://wafflecoffeeannecy.netlify.app/" # your site name
 
 collections:
   - name: post
-    label: Posts
+    label: "📰 Articles"
     folder: src/content/posts
     create: true
     format: frontmatter
@@ -26,7 +26,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
   
   - name: big-bubble
-    label: "Big Bubble"
+    label: "🍰 Big Bubble"
     folder: src/content/big-bubble
     create: true
     format: frontmatter
@@ -34,11 +34,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
   - name: pancakes
-    label: Pancakes
+    label: "🥞 Pancakes"
     folder: src/content/pancakes
     create: true
     format: frontmatter
@@ -46,11 +47,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
   - name: crepes-sucrees
-    label: "Crêpes Sucrées"
+    label: "🍓 Crêpes Sucrées"
     folder: src/content/crepes-sucrees
     create: true
     format: frontmatter
@@ -58,11 +60,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
   - name: yaourts-glaces
-    label: "Yaourts Glacés"
+    label: "🍨 Yaourts Glacés"
     folder: src/content/yaourts-glaces
     create: true
     format: frontmatter
@@ -70,11 +73,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
   - name: cafes
-    label: Cafés
+    label: "☕ Cafés"
     folder: src/content/cafes
     create: true
     format: frontmatter
@@ -82,11 +86,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
   - name: thes
-    label: Thés
+    label: "🍵 Thés"
     folder: src/content/thes
     create: true
     format: frontmatter
@@ -94,11 +99,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
   - name: boissons
-    label: Boissons
+    label: "🍹 Boissons"
     folder: src/content/boissons
     create: true
     format: frontmatter
@@ -106,11 +112,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
   - name: smoothies
-    label: Smoothies
+    label: "🥤 Smoothies"
     folder: src/content/smoothies
     create: true
     format: frontmatter
@@ -118,11 +125,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }
 
   - name: milkshakes
-    label: Milkshakes
+    label: "🥛 Milkshakes"
     folder: src/content/milkshakes
     create: true
     format: frontmatter
@@ -130,5 +138,6 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
       - { name: description, label: Description, widget: text }
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: image, label: Image, widget: image }
       - { name: image_alt, label: "Image Alt Text", widget: string }

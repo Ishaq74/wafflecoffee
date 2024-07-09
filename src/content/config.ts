@@ -19,6 +19,7 @@ const menuCollection = (name: string) => defineCollection({
     description: z.string().optional(),
     image: z.string().optional(),
     image_alt: z.string().optional(),
+    isDraft: z.boolean().default(false),
   }),
 });
 
