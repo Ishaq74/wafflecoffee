@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ishaq74/wafflecoffee #replace with your githu repo
+  repo: ishaq74/wafflecoffee #replace with your github repo
   branch: main
   squash_merges: true
   open_authoring: true
@@ -25,15 +25,110 @@ collections:
       - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
       - { name: body, label: Body, widget: markdown }
   
-  - name: menu
-    label: Menu
-    folder: src/content/menu
+  - name: big-bubble
+    label: "Big Bubble"
+    folder: src/content/big-bubble
     create: true
     format: frontmatter
     fields:
       - { name: title, label: Title, widget: string }
       - { name: price, label: Price, widget: string }
-      - { name: category, label: Category, widget: select, options: ["Gaufres et Crêpes", "Yaourts Glacés", "Cafés et Thés", "Boissons", "Smoothies et Milkshakes"] }
       - { name: description, label: Description, widget: text }
       - { name: image, label: Image, widget: image }
-      - { name: image_alt, label: Image Alt, widget: string }
+      - { name: image_alt, label: "Image Alt Text", widget: string }
+
+  - name: pancakes
+    label: Pancakes
+    folder: src/content/pancakes
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: "Image Alt Text", widget: string }
+
+  - name: crepes-sucrees
+    label: "Crêpes Sucrées"
+    folder: src/content/crepes-sucrees
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: "Image Alt Text", widget: string }
+
+  - name: yaourts-glaces
+    label: "Yaourts Glacés"
+    folder: src/content/yaourts-glaces
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: "Image Alt Text", widget: string }
+
+  - name: cafes
+    label: Cafés
+    folder: src/content/cafes
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: "Image Alt Text", widget: string }
+
+  - name: thes
+    label: Thés
+    folder: src/content/thes
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: "Image Alt Text", widget: string }
+
+  - name: boissons
+    label: Boissons
+    folder: src/content/boissons
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: "Image Alt Text", widget: string }
+
+  - name: smoothies
+    label: Smoothies
+    folder: src/content/smoothies
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: "Image Alt Text", widget: string }
+
+  - name: milkshakes
+    label: Milkshakes
+    folder: src/content/milkshakes
+    create: true
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: "Image Alt Text", widget: string }

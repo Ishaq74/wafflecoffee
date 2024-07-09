@@ -11,12 +11,11 @@ const postsCollection = defineCollection({
   }),
 });
 
-const menuCollection = defineCollection({
+const menuCollection = (name: string) => defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
     price: z.string(),
-    category: z.enum(["Gaufres et Crêpes", "Yaourts Glacés", "Cafés et Thés", "Boissons", "Smoothies et Milkshakes"]),
     description: z.string().optional(),
     image: z.string().optional(),
     image_alt: z.string().optional(),
@@ -25,5 +24,13 @@ const menuCollection = defineCollection({
 
 export const collections = {
   posts: postsCollection,
-  menu: menuCollection,
+  big_bubble: menuCollection("big-bubble"),
+  pancakes: menuCollection("pancakes"),
+  crepes_sucrees: menuCollection("crepes-sucrees"),
+  yaourts_glaces: menuCollection("yaourts-glaces"),
+  cafes: menuCollection("cafes"),
+  thes: menuCollection("thes"),
+  boissons: menuCollection("boissons"),
+  smoothies: menuCollection("smoothies"),
+  milkshakes: menuCollection("milkshakes"),
 };
